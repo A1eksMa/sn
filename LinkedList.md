@@ -43,18 +43,8 @@ while current is not None:
     print(current.val)
     current = current.next
 ```
-Go ahead using recurcive function
-```python3
-current = head
-def move_forward(node):
-        if node is None:
-            return
-        move_forward(node.next)
-        print(node.val)
-move_forward(current)
-```
 
-Add `__iter__` and `__next__` methods to make ListNode iterable
+Add `__iter__` and `__next__` methods to make class ListNode iterable
 ```python3
     def __iter__(self):
         self.current = self
@@ -67,12 +57,6 @@ Add `__iter__` and `__next__` methods to make ListNode iterable
             result = self.current.val
             self.current = self.current.next
             return result
-```
-and go ahead using `for`
-```python3
-current = head
-for i in current:
-    print(i)
 ```
 
 Alternatively, using iterable class
@@ -92,13 +76,21 @@ class ListNodeIterator:
             self.current = self.current.next
             return result
 ```
-and go ahead
+
+and go ahead using `for`
+```python3
+current = head
+for i in current:
+    print(i)
+```
+or
 ```python3
 current = head
 for i in ListNodeIterator(current):
     print(i)
 ```
-Output values with `while`, `for`, using recurcive function or iterable class:
+
+Output values with `while`, `for` or iterable class will be same:
 ```
 >>> 1
 >>> 2
@@ -107,14 +99,14 @@ Output values with `while`, `for`, using recurcive function or iterable class:
 ### Reverse
 Using recurcive function
 ```python3
-current = ListNode(None, head)
-def move_backward(c, n):
+current = head
+def move_backward(n):
     if n is None:
         return
-    move_backward(n, n.next)
+    move_backward(n.next)
     print(n.val)
         
-move_backward(current, head)
+move_backward(current)
 ```
 
 Output
