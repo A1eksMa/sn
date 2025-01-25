@@ -1,4 +1,10 @@
 # Singly-linked list
+|head|h|
+|current|c|
+|value|v|
+|next|n|
+
+
 ## Python3
 ### Definition
 Definition for singly-linked list
@@ -15,17 +21,30 @@ Customizate `__repr__` method to print linked list
         return (f"Node: {id(self)}\n({self.val},   {next_id})\n\n"
                 + (f"{self.next.__repr__()}" if self.next else ""))
 ```
-Now that looks like a list of nodes
+Now that looks like a list of nodes. Example of usage:
 ```
-Node: id
-(val,   next)
+print(ListNode())
+>>> Node: id
+>>> (val,   next)
 ```
-
-
-
-
-
-
+### Convert
+Convert any iterable sequence (list, tuple and other) to ListNode
+```python3
+    @classmethod
+    def toListNode(cls, iterable):
+        if not iterable:
+            return None
+        head = cls(iterable[0])
+        current = head
+        for value in iterable[1:]:
+            current.next = cls(value)
+            current = current.next
+        return head
+```
+Example of usage:
+```python3
+head = ListNode.toListNode([1,2,3])
+```
 
 ### Iterator
 ```python3
