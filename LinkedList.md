@@ -36,10 +36,10 @@ head = ListNode.toListNode(t)
 ### Iteration
 Create linked list from tupple (as an example above).
 
-Go ahead with `while`
+Go ahead using `while`
 ```python3
 current = head
-while current is not None:
+while current:
     print(current.val)
     current = current.next
 ```
