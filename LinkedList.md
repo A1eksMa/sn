@@ -57,8 +57,18 @@ while current is not None:
     print(current.val)
     current = current.next
 ```
+Go ahead using recurce
+```python3
+current = head
+def move_forward(node):
+        if node is None:
+            return
+        move_forward(node.next)
+        print(node.val)
+move_forward(current)
+```
 
-
+Add `__iter__` and `__next__` methods to iterabe
 ```python3
     def __iter__(self):
         self.current = self
@@ -72,7 +82,14 @@ while current is not None:
             self.current = self.current.next
             return result
 ```
+Go ahead using `for`
+```python3
+current = head
+for i in current:
+    print(i)
+```
 
+Alternatively, using iterable class
 ```python3
 class ListNodeIterator:
     def __init__(self, head):
@@ -88,6 +105,12 @@ class ListNodeIterator:
             result = self.current.val
             self.current = self.current.next
             return result
+```
+and go ahead
+```python3
+current = head
+for i in ListNodeIterator(current):
+    print(i)
 ```
 ## java
 ```java
