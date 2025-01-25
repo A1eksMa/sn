@@ -82,7 +82,7 @@ Add `__iter__` and `__next__` methods to iterabe
             self.current = self.current.next
             return result
 ```
-Go ahead using `for`
+and go ahead using `for`
 ```python3
 current = head
 for i in current:
