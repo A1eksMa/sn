@@ -99,10 +99,29 @@ for i in ListNodeIterator(current):
     print(i)
 ```
 Output values with `while`, `for`, using recurcive function or iterable class:
-```python3
+```
 >>> 1
 >>> 2
 >>> 3
+```
+### Reverse
+Using recurcive function
+```python3
+current = ListNode(None, head)
+def move_backward(c, n):
+    if n is None:
+        return
+    move_backward(n, n.next)
+    print(n.val)
+        
+move_backward(current, head)
+```
+
+Output
+```python3
+>>> 3
+>>> 2
+>>> 1
 ```
 
 Customizate `__repr__` method to print linked list
