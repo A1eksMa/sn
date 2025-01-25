@@ -43,10 +43,22 @@ Convert any iterable sequence (list, tuple and other) to ListNode
 ```
 Example of usage:
 ```python3
-head = ListNode.toListNode([1,2,3])
+t = (1,2,3)
+head = ListNode.toListNode(t)
 ```
 
-### Iterator
+### Iteration
+Create linked list from tupple (as an example above).
+
+Go ahead with `while`
+```python3
+current = head
+while current is not None:
+    print(current.val)
+    current = current.next
+```
+
+
 ```python3
     def __iter__(self):
         self.current = self
