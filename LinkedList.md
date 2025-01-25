@@ -116,6 +116,37 @@ Output
 >>> 1
 ```
 
+Add an element to end of linked list
+```python3
+    def add(self, val):
+        current = self
+        while current.next:
+            current = current.next
+        current.next = ListNode(val)
+```
+
+Add collections or any iterable sequenceto to end of linked list
+```python3
+    def addAll(self, iterable):
+        current = self
+        while current.next:
+            current = current.next
+        for i in iterable:
+            current.next = ListNode(i)
+            current = current.next
+```
+
+Checks whether the value exists in list
+```python3
+    def contains(self, val):
+        current = self
+        while current:
+            if current.val == val:
+                return True
+            current = current.next
+        return False
+```
+
 Customizate `__repr__` method to print linked list
 ```python3
     def __repr__(self):
