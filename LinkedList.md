@@ -1,10 +1,33 @@
-# Definition for singly-linked list.
+# Definition for singly-linked list
+## Python3
+### Definition
 ```python3
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
+```
+Customizate `__repr__` method to print linked list
+```python3
+    def __repr__(self):
+        next_id = id(self.next) if self.next else None
+        return (f"Node: {id(self)}\n({self.val},   {next_id})\n\n"
+                + (f"{self.next.__repr__()}" if self.next else ""))
+```
+Now that looks like a list of nodes
+```
+Node: id
+(val,   next)
+```
 
+
+
+
+
+
+
+### Iterator
+```python3
     def __iter__(self):
         self.current = self
         return self
@@ -16,7 +39,9 @@ class ListNode:
             result = self.current.val
             self.current = self.current.next
             return result
+```
 
+```python3
 class ListNodeIterator:
     def __init__(self, head):
         self.current = head
@@ -32,7 +57,7 @@ class ListNodeIterator:
             self.current = self.current.next
             return result
 ```
-
+## java
 ```java
 public class ListNode {
     int val;
@@ -43,7 +68,7 @@ public class ListNode {
     }
 }
 ```
-
+## php
 ```php
 class ListNode {
     public $val = 0;
@@ -51,7 +76,7 @@ class ListNode {
     function __construct($val) { $this->val = $val; }
 }
 ```
-
+## rust
 ```rust
 
 #[derive(PartialEq, Eq, Clone, Debug)]
