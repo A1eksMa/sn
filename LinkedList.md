@@ -57,7 +57,7 @@ while current is not None:
     print(current.val)
     current = current.next
 ```
-Go ahead using recurce
+Go ahead using recurcive function
 ```python3
 current = head
 def move_forward(node):
