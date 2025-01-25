@@ -14,21 +14,7 @@ class ListNode:
         self.val = x
         self.next = None
 ```
-Customizate `__repr__` method to print linked list
-```python3
-    def __repr__(self):
-        next_id = id(self.next) if self.next else None
-        return (f"Node: {id(self)}\n({self.val},   {next_id})\n\n"
-                + (f"{self.next.__repr__()}" if self.next else ""))
-```
-Now that looks like a list of nodes. Example of usage:
-```
-print(ListNode())
->>> Node: id
->>> (val,   next)
-```
-### Convert
-Convert any iterable sequence (list, tuple and other) to ListNode
+Add any iterable sequence (list, tuple and other) to ListNode
 ```python3
     @classmethod
     def toListNode(cls, iterable):
@@ -111,6 +97,33 @@ and go ahead
 current = head
 for i in ListNodeIterator(current):
     print(i)
+```
+Output values with `while`, `for`, using recurcive function or iterable class:
+```python3
+>>> 1
+>>> 2
+>>> 3
+```
+
+Customizate `__repr__` method to print linked list
+```python3
+    def __repr__(self):
+        next_id = id(self.next) if self.next else None
+        return (f"Node: {id(self)}\n({self.val},   {next_id})\n\n"
+                + (f"{self.next.__repr__()}" if self.next else ""))
+```
+Now that looks like a list of nodes. Example of usage:
+```
+print(head)
+>>> Node_1: id        #head
+>>> (val,   next)
+>>>
+>>> Node_2: id
+>>> (val,   next)
+>>>
+>>> Node_3: id
+>>> (val,   next)
+>>>
 ```
 ## java
 ```java
