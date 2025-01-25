@@ -59,43 +59,20 @@ Add `__iter__` and `__next__` methods to make class ListNode iterable
             return result
 ```
 
-Alternatively, using iterable class
-```python3
-class ListNodeIterator:
-    def __init__(self, head):
-        self.current = head
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.current is None:
-            raise StopIteration
-        else:
-            result = self.current.val
-            self.current = self.current.next
-            return result
-```
-
 and go ahead using `for`
 ```python3
 current = head
 for i in current:
     print(i)
 ```
-or
-```python3
-current = head
-for i in ListNodeIterator(current):
-    print(i)
-```
 
-Output values with `while`, `for` or iterable class will be same:
-```
+Output values with `while`, `for` will be same:
+```python3
 >>> 1
 >>> 2
 >>> 3
 ```
+
 ### Reverse
 Using recurcive function
 ```python3
@@ -125,7 +102,7 @@ Add an element to end of linked list
         current.next = ListNode(val)
 ```
 
-Add collections or any iterable sequenceto to end of linked list
+Add collections or any iterable sequence to end of linked list
 ```python3
     def addAll(self, iterable):
         current = self
