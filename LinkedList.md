@@ -1,6 +1,7 @@
-# Definition for singly-linked list
+# Singly-linked list
 ## Python3
 ### Definition
+Definition for singly-linked list
 ```python3
 class ListNode:
     def __init__(self, x):
