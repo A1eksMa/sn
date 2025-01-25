@@ -14,7 +14,7 @@ class ListNode:
         self.val = x
         self.next = None
 ```
-Add any iterable sequence (list, tuple and other) to ListNode
+Convert any iterable sequence (list, tuple and other) to singly-linked list
 ```python3
     @classmethod
     def toListNode(cls, iterable):
