@@ -54,7 +54,7 @@ def move_forward(node):
 move_forward(current)
 ```
 
-Add `__iter__` and `__next__` methods to make ListNode iterabe
+Add `__iter__` and `__next__` methods to make ListNode iterable
 ```python3
     def __iter__(self):
         self.current = self
