@@ -5,7 +5,17 @@ class ListNode:
 
 class SinglyLinkedList:
     def __init__(self, head: ListNode):
-        self.current = head
+        self.head = head
+        self.current = self.head
+        self.resize()
+        
+    def resize(self):
+        self.size = 0
+        self.current = self.head
+        while self.current.next is not None:
+            self.size+=1
+            current = current.next
+        self.current = self.head
 
     def __iter__(self):
         return self
@@ -47,3 +57,15 @@ class SinglyLinkedList:
             current = current.next
         
         return False
+
+    def isEmpty(self) -> boolean:
+        return head is None
+
+    def clear(self):
+        pass
+
+    def add(self) -> boolean:
+        pass
+
+    def addAll(self) -> boolean
+        pass
