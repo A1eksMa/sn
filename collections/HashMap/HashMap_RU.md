@@ -1,5 +1,5 @@
 # HashMap
-| [ENG](https://github.com/A1eksMa/sn/blob/main/collections//HashMapHashMap.md) | [RU](https://github.com/A1eksMa/sn/blob/main/collections/HashMap/HashMap_RU.md) |
+| [ENG](https://github.com/A1eksMa/sn/blob/main/collections/HashMap/HashMap.md) | [RU](https://github.com/A1eksMa/sn/blob/main/collections/HashMap/HashMap_RU.md) |
 
 ## Практика в Java. Пишем свой собственный HashMap Collections Framework.
 См. [ENG](https://github.com/A1eksMa/sn/blob/main/collections/HashMap/HashMap.md) версию.
