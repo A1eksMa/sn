@@ -8,6 +8,7 @@ public class E_LinkedListIteratorTest {
         String one = "One";
         String two = "Two";
         String three = "Three";
+        StringBuilder builder = new StringBuilder("");
         
         // Test E_LinkedList class
         E_LinkedList<String> e_linked_list = new E_LinkedList<>();
@@ -19,10 +20,10 @@ public class E_LinkedListIteratorTest {
         
         // Test `.iterator()` method of E_LinkedList class
         for (String e: e_linked_list) {
-            System.out.println(e);
+            builder.append(e);
         }
 
         // Проверяем, что элемент больше не существует
-            assertFalse(list.remove("ABCD"), "Элемент уже был удалён, удаление должно вернуть false");
+        assertTrue(builder.toString().equals("OneTwoThree"), "Itrator build OneTwoThree from One Two Three");
     }
 }

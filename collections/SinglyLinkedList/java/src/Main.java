@@ -5,6 +5,7 @@ class Main {
         String one = "One";
         String two = "Two";
         String three = "Three";
+        StringBuilder builder = new StringBuilder("");
         
         // Test E_LinkedList class
         E_LinkedList<String> e_linked_list = new E_LinkedList<>();
@@ -17,8 +18,10 @@ class Main {
         // Test `.iterator()` method of E_LinkedList class
         for (String e: e_linked_list) {
             System.out.println(e);
+            builder.append(e);
         }
-
+        System.out.println(builder.toString().equals("OneTwoThree"));
+        /*
         // Test `.clear()` method of E_LinkedList class
         e_linked_list.clear();
 
@@ -45,7 +48,7 @@ class Main {
         // Test KV_LinkedList class
         KV_LinkedList<String, Integer> kv_list = new KV_LinkedList<>();
 
-        
+        */
 
         /**
         list.add("One", 1);
